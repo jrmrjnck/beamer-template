@@ -1,0 +1,50 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+
+\mode<presentation>
+{
+   \usetheme{Malmoe}
+   \usecolortheme[named=BurntOrange]{structure}
+}
+
+\beamerdefaultoverlayspecification{<+->}
+
+\title[Short Title]{Long Title: Some Cool Topic}
+\author[Short Name]{Full Name}
+\institute[Short Org]{Full Organization Name}
+\date[Short Date]{Full Date}
+
+\pgfdeclareimage[height=0.5cm]{img-title}{img-filename}
+\logo{\pgfuseimage{img-title}}
+
+\AtBeginSubsection[]
+{
+   \begin{frame}<beamer>{Outline}
+      \tableofcontents[currentsection,currentsubsection]
+   \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\section{Section 1}
+\subsection{Subsection 1.1}
+\begin{frame}
+   {Frame Title}
+   \begin{itemize}
+      \item The most important thing is \alert{this}.
+      \item And another point.
+   \end{itemize}
+\end{frame}
+
+\subsection{Subsection 1.2}
+
+\section{Section 2}
+\subsection{Subsection 2.1}
+
+\end{document}
